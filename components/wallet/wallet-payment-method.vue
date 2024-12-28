@@ -79,6 +79,9 @@
         </template>
       </UDropdown>
     </div>
+    <UModal v-model="openAddCardModal">
+      <WalletAddCard @close="openAddCardModal = false" />
+    </UModal>
   </div>
 </template>
 <script setup lang="ts">

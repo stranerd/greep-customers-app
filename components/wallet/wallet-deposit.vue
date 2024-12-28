@@ -51,9 +51,6 @@
     </div>
     <WalletPaymentMethod />
     <UButton class="rounded-lg" color="green" size="xl" block>Deposit</UButton>
-    <UModal v-model="openAddCardModal">
-      <WalletAddCard @close="openAddCardModal = false" />
-    </UModal>
   </UCard>
 </template>
 
@@ -63,7 +60,6 @@ import { usePaymentStore } from "~/store/payment.store";
 const depositAmount = ref(0);
 
 const { supportedCurrencies, isCardAdded } = storeToRefs(usePaymentStore());
-const openAddCardModal = ref(!isCardAdded.value);
 
 const selectedCurrency = ref(supportedCurrencies.value[0]);
 </script>

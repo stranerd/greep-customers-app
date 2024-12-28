@@ -34,7 +34,7 @@
             variant="soft"
             color="green"
             class="p-2"
-            :disabled="selectedVendor.id === user?.id"
+            v-if="selectedVendor.id !== user?.id"
             @click="
               messageStore.setActiveChat(
                 selectedVendor.id,

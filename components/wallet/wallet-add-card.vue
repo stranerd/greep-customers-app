@@ -28,6 +28,7 @@
                 <BaseDatePicker
                   v-model="state.cardExpiryDate"
                   is-required
+                  placeholder="Select Date"
                   @close="close"
                 />
               </template>
@@ -69,7 +70,7 @@ const state = ref<WalletCardEntity>({
   cardNumber: "",
   cardName: "",
   cardCVV: "",
-  cardExpiryDate: new Date().toISOString(),
+  cardExpiryDate: null,
 });
 
 const addCard = async (field: any) => {
